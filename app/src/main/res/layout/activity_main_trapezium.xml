@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86C9FC"
+    tools:context=".MainActivityTrapezium">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_weight="1"
+        android:background="#DA03CF"
+        android:gravity="center"
+        android:text="TRAPEZIUM"
+        android:textColor="@color/purple_700"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBase1"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="Enter base1:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/editBaseNumber1"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="28dp"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvBase1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvBase2"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="Enter base2:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tvBase1"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase1" />
+
+    <EditText
+        android:id="@+id/editBaseNumber2"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tvTitle"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvBase2"
+        app:layout_constraintTop_toBottomOf="@+id/editBaseNumber1" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="Enter height:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tvBase2"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase2" />
+
+    <EditText
+        android:id="@+id/editHeightNumber"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tvTitle"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editBaseNumber2" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="131dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="138dp"
+        android:background="#2196F3"
+        android:onClick="areaOfTrapezium"
+        android:text="SUBMIT"
+        android:textSize="20dp"
+        android:textColor="#CDDC39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
+
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/buttonSubmit"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Area:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
+
+    <TextView
+        android:id="@+id/tvAreaResult"
+        android:layout_width="304dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/tvArea"
+        android:layout_alignParentStart="true"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvArea"
+        app:layout_constraintTop_toBottomOf="@+id/tvArea" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

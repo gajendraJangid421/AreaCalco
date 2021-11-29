@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FF9800"
+        android:gravity="center"
+        android:text="Welcome to AREACALCO!"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCircle"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_500"
+        android:text="Circle"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/buttonTriangle"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/purple_500"
+        android:text="triangle"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/buttonSquare"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/buttonCircle"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_500"
+        android:text="Square"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCircle" />
+
+    <Button
+        android:id="@+id/buttonRectangle"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/buttonTriangle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/purple_500"
+        android:text="Rectangle"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTriangle" />
+
+    <Button
+        android:id="@+id/buttonTrapezium"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/buttonSquare"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_500"
+        android:text="Trapezium"
+        android:textColor="@color/white"
+        android:textSize="27dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSquare" />
+
+
+    <Button
+        android:id="@+id/buttonRandom"
+        android:layout_width="199dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/buttonRectangle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="4dp"
+        android:background="@color/purple_500"
+        android:text="Random"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRectangle" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/buttonTrapezium"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:text="Triangle"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/buttonRandom"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/buttonTrapezium"
+        android:text="Quadrilateral"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTrapezium" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Pentagon"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTrapezium" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/button4"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/button3"
+        android:visibility="invisible"
+        android:text="Hexa/Octa"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTrapezium" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:text="Created By: GAJENDRA" />
+
+</RelativeLayout>

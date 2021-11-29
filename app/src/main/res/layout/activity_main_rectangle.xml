@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86C9FC"
+    tools:context=".MainActivityRectangle">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_weight="1"
+        android:background="#DA03CF"
+        android:gravity="center"
+        android:text="RECTANGLE"
+        android:textColor="@color/purple_700"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="Enter length:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/editLengthNumber"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginEnd="16dp"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLength"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvWidth"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="Enter width:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tvLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvLength" />
+
+    <EditText
+        android:id="@+id/editWidthNumber"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/tvTitle"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvWidth"
+        app:layout_constraintTop_toBottomOf="@+id/editLengthNumber" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="131dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="138dp"
+        android:background="#2196F3"
+        android:onClick="areaOfRectangle"
+        android:text="SUBMIT"
+        android:textSize="20dp"
+        android:textColor="#CDDC39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWidth" />
+
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/buttonSubmit"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Area:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
+
+    <TextView
+        android:id="@+id/tvAreaResult"
+        android:layout_width="304dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/tvArea"
+        android:layout_alignParentStart="true"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvArea"
+        app:layout_constraintTop_toBottomOf="@+id/tvArea" />
+
+    <TextView
+        android:id="@+id/tvPerimeter"
+        android:layout_width="140dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/tvAreaResult"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="Perimeter:"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tvAreaResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvAreaResult" />
+
+    <TextView
+        android:id="@+id/tvPerimeterResult"
+        android:layout_width="304dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/tvPerimeter"
+        android:layout_alignParentStart="true"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@+id/tvPerimeter"
+        app:layout_constraintTop_toBottomOf="@+id/tvPerimeter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
